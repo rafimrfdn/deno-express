@@ -1,11 +1,18 @@
 import express from 'npm:express@4.17';
 import path from 'npm:path@0.12.7';
 
+import * as path from "https://deno.land/std@0.188.0/path/mod.ts";
+
+const __filename = path.fromFileUrl(import.meta.url);
+// Without trailing slash
+const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
+
 const app = express();
+
 
 //app.use(express.static('public'));
 app.use(express.json());
-app.use(express.static(path.join(dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.use((_, res, next) => {
