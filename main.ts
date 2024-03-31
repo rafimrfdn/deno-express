@@ -1,7 +1,7 @@
 import express from 'npm:express@4.17';
 import path from 'node:path';
 
-const __dirname = new URL('.', import.meta.url).pathname;
+const __dirname = Deno.cwd()
 
 const app = express();
 
