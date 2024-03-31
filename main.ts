@@ -19,6 +19,10 @@ app.use((_, res, next) => {
 
 let counter = 0;
 
+app.get('/', async (req, res) => {
+  res.send(`halo`);
+});
+
 app.get('/api/increment', (_, res) => {
   counter++;
   const updatedHTML = `<h2 id="counter">counter: <span>${counter}</span></h2>`;
