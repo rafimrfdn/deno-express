@@ -1,8 +1,8 @@
 import express from 'npm:express@4.17';
+import * as path from "https://deno.land/std@0.207.0/path/mod.ts";
 
-
-import __ from 'https://deno.land/x/dirname/mod.ts';
-const { __filename, __dirname } = __(import.meta);
+const __filename = path.fromFileUrl(import.meta.url);
+const __dirname = path.dirname(path.fromFileUrl(import.meta.url));
 
 const app = express();
 
