@@ -22,9 +22,11 @@ app.get('/api/increment', (_, res) => {
 
 const PORT = 3000;
 
-app.listen(PORT, () => {
-    console.log(`server running on http://localhost:${PORT}`);
-}); 
+// app.listen(PORT, () => {
+//     console.log(`server running on http://localhost:${PORT}`);
+// }); 
+
+app.listen(PORT);
 
 // module.exports = app;
 
