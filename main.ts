@@ -1,12 +1,10 @@
 import express from 'npm:express@4.17';
-import path from 'node:path';
 
-const __dirname = Deno.cwd()
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'public')))
-//app.use(express.static('public'));
+
+app.use(express.static('public'));
 app.use(express.json());
 
 
@@ -26,13 +24,8 @@ app.get('/api/increment', (_, res) => {
 
 const PORT = 3000;
 
-// app.listen(PORT, () => {
-//     console.log(`server running on http://localhost:${PORT}`);
-// }); 
-
 app.listen(PORT);
 
-// module.exports = app;
 
 
 
