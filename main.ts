@@ -4,12 +4,9 @@ import * as path from "https://deno.land/std/path/mod.ts";
 
 const app = express();
 
-app.use(express.static(path.join(dirname, './public')));
-//app.use('/public', express.static(dirname('/public')));
 
-//app.use('/', express.static(path.join(dirname, 'public')))
 
-//app.use(express.static('/public'));
+app.use(express.static('/public'));
 app.use(express.json());
 
 
@@ -21,10 +18,10 @@ app.use((_, res, next) => {
 let counter = 0;
 
 
-//app.get('/', async (req, res) => {
-//  res.send('haloo')
+app.get('/', async (req, res) => {
+  res.send('index.html')
   
-//});
+});
 
 app.get('/api/increment', (_, res) => {
   counter++;
