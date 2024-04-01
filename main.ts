@@ -5,8 +5,10 @@ import { basename, dirname, path } from "https://deno.land/std/path/mod.ts";
 
 const app = express();
 
+basename('./');
+dirname('/public');
 
-app.use('/', express.static(path.join(dirname, 'public')))
+//app.use('/', express.static(path.join(dirname, 'public')))
 
 //app.use(express.static('/public'));
 app.use(express.json());
