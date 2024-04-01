@@ -6,7 +6,7 @@ const app = express();
 
 app.use('/public', serveStatic(Deno.cwd()));
 
-//app.use(express.static('public'));
+app.use(express.static('public'));
 app.use(express.json());
 
 
@@ -16,6 +16,12 @@ app.use((_, res, next) => {
 });
 
 let counter = 0;
+
+
+//app.get('/', async (req, res) => {
+
+  
+//});
 
 app.get('/api/increment', (_, res) => {
   counter++;
