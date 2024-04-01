@@ -1,11 +1,11 @@
 import express from 'npm:express@4.17';
-import { basename, dirname } from "https://deno.land/std/path/mod.ts";
+import { basename, dirname, path } from "https://deno.land/std/path/mod.ts";
 
 
 
 const app = express();
 
-//const path = require('path')
+
 app.use('/', express.static(path.join(dirname, 'public')))
 
 //app.use(express.static('/public'));
