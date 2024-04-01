@@ -18,10 +18,10 @@ app.use((_, res, next) => {
 let counter = 0;
 
 
-//app.get('/', async (req, res) => {
-
+app.get('/', async (req, res) => {
+  res.send('haloo')
   
-//});
+});
 
 app.get('/api/increment', (_, res) => {
   counter++;
