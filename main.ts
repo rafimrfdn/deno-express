@@ -24,8 +24,8 @@ let counter = 0;
 //});
 
 
-app.get('/', ( res) => {
-  res.sendFile('/public/index.html')
+app.get('/', (req, res) => {
+  res.sendFile(dirname('/public'),'/index.html')
 });
 
 
