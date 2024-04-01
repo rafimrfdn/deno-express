@@ -24,19 +24,8 @@ let counter = 0;
 //});
 
 
-app.get('/', function (req, res, next) {
-  var options = {
-    root: path.join(dirname, 'public'),
-  }
-
-  var fileName = req.params.name
-  res.sendFile(fileName, options, function (err) {
-    if (err) {
-      next(err)
-    } else {
-      console.log('Sent:', fileName)
-    }
-  })
+app.get('/', (req, res, next) {
+  res.sendFile('/public/index.html')
 });
 
 
