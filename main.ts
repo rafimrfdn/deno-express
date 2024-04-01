@@ -4,7 +4,7 @@ import * as path from "https://deno.land/std/path/mod.ts";
 
 const app = express();
 
-app.use('/', express.static(path.join(dirname,'public')));
+app.use(express.static(path.join(dirname, './public')));
 //app.use('/public', express.static(dirname('/public')));
 
 //app.use('/', express.static(path.join(dirname, 'public')))
