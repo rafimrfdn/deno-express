@@ -1,13 +1,10 @@
 import express from 'npm:express@4.17';
-import {  serveStatic } from "https://deno.land/x/opine@0.21.2/mod.ts";
-
-
 
 
 const app = express();
 
 
-app.use("/public", serveStatic("public"));
+app.use('/', express.static('public'))
 
 //app.use(express.static('/public'));
 app.use(express.json());
