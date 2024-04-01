@@ -1,16 +1,12 @@
 import express from 'npm:express@4.17';
-import nodeHttp from "node:http";
-import nodeFs from "node:fs";
+
 
 const app = express();
 
 
-app.use("/public", async (req, res) => {
-  const url = req.url.split(/[?#]/)[0];
-  await nodeFs.createReadStream(resolve(Deno.cwd(), "src", `public${url}`)).pipe(res);
-});
 
-//app.use(express.static('public'));
+
+app.use(express.static('/public'));
 app.use(express.json());
 
 
