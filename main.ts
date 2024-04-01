@@ -7,8 +7,7 @@ import {  serveStatic } from "https://deno.land/x/opine@0.21.2/mod.ts";
 const app = express();
 
 
-
-app.use(serveStatic("public"));
+app.use("/", serveStatic("public"));
 
 //app.use(express.static('/public'));
 app.use(express.json());
@@ -22,10 +21,10 @@ app.use((_, res, next) => {
 let counter = 0;
 
 
-app.get('/', async (req, res) => {
-  res.send('haloo')
+//app.get('/', async (req, res) => {
+//  res.send('haloo')
   
-});
+//});
 
 app.get('/api/increment', (_, res) => {
   counter++;
