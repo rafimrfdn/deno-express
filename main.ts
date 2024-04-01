@@ -18,10 +18,29 @@ app.use((_, res, next) => {
 let counter = 0;
 
 
-app.get('/', async (req, res) => {
-  res.send('index.html')
+//app.get('/', async (req, res) => {
+//  res.send('index.html')
   
+//});
+
+
+app.get('/', function (req, res, next) {
+  var options = {
+    root: path.join(__dirname, 'public'),
+  }
+
+  var fileName = req.params.name
+  res.sendFile(fileName, options, function (err) {
+    if (err) {
+      next(err)
+    } else {
+      console.log('Sent:', fileName)
+    }
+  })
 });
+
+
+
 
 app.get('/api/increment', (_, res) => {
   counter++;
