@@ -1,5 +1,5 @@
 import express from 'npm:express@4.17';
-import { basename, dirname, path } from "https://deno.land/std/path/mod.ts";
+import { basename, dirname } from "https://deno.land/std/path/mod.ts";
 
 
 
