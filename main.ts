@@ -1,10 +1,12 @@
 import express from 'npm:express@4.17';
-
+import serveStatic from "npm:serve-static"
 
 const app = express();
 
 
-app.use(express.static('public'));
+app.use('/public', serveStatic(Deno.cwd()));
+
+//app.use(express.static('public'));
 app.use(express.json());
 
 
