@@ -1,5 +1,5 @@
 import express from 'npm:express@4.17';
-import {dirname} from "https://deno.land/std/path/mod.ts";
+import {path, dirname} from "https://deno.land/std/path/mod.ts";
 
 
 const app = express();
