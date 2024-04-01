@@ -4,9 +4,9 @@ import serveStatic from "npm:serve-static"
 const app = express();
 
 
-app.use('/public', serveStatic(Deno.cwd()));
+app.use('public', serveStatic(Deno.cwd()));
 
-app.use(express.static('public'));
+//app.use(express.static('public'));
 app.use(express.json());
 
 
